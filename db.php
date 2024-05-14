@@ -7,6 +7,8 @@ $movie3 = new Movie('Iron Man 3', 'English', 2013, '1h 49m', 'Shane Black', ['Ac
 $movie4 = new Movie('Guardians of the Galaxy', 'English', 2014, '2h 2m', 'James Gunn', ['Action', 'Science Fiction', 'Adventure']);
 $movie5 = new Movie('Guardians of the Galaxy Vol. 2', 'English', 2017, '2h 17m', 'James Gunn', ['Action', 'Science Fiction', 'Adventure']);
 $movie6 = new Movie('Guardians of the Galaxy Vol. 3', 'English', 2023, '2h 30m', 'James Gunn', ['Action', 'Science Fiction', 'Adventure']);
+$movie7 = new Movie('The Avengers', 'English', 2012, '2h 23m', 'Joss Whedon', ['Action', 'Science Fiction', 'Adventure']);
+$movie8 = new Movie('Avengers: Endgame', 'English', 2019, '3h 1m', 'Steve Englehart', ['Action', 'Science Fiction', 'Adventure']);
 
 $movies = [
     $movie1,
@@ -15,4 +17,6 @@ $movies = [
     $movie4,
     $movie5,
     $movie6,
+    $movie7,
+    $movie8,
 ];
