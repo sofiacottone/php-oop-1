@@ -44,6 +44,11 @@ class Movies
 $movie1 = new Movies('Iron Man', 'English', 2008, '2h 6m', 'Jon Favreau', 'Action');
 $movie2 = new Movies('Guardians of the Galaxy', 'English', 2014, '2h 2m', 'James Gunn', 'Action');
 
+$movies = [
+    $movie1,
+    $movie2
+];
+// var_dump($movies);
 // var_dump($movie1);
 // var_dump($movie2);
 
@@ -63,8 +68,19 @@ $movie2 = new Movies('Guardians of the Galaxy', 'English', 2014, '2h 2m', 'James
 
 <body>
     <div class="container p-4">
-        <div><?php echo $movie1->getMovieDetails(); ?></div>
-        <div><?php echo $movie2->getMovieDetails(); ?></div>
+        <h1 class="text-center">Movies</h1>
+
+        <?php foreach ($movies as $movie) { ?>
+            <div class="my-3">
+                <div>Movie Title: <?php echo $movie->title; ?></div>
+                <div>Original Language: <?php echo $movie->original_language; ?></div>
+                <div>Year: <?php echo $movie->year; ?></div>
+                <div>Duration: <?php echo $movie->duration; ?></div>
+                <div>Director: <?php echo $movie->director; ?></div>
+                <div>Genre: <?php echo $movie->genre; ?></div>
+            </div>
+        <?php } ?>
+
     </div>
 </body>
 
