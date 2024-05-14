@@ -24,7 +24,7 @@ class Movies
 
 
     // Costruttore
-    public function __construct($title, $original_language, int $year, $duration, $director, $genre)
+    public function __construct($title, $original_language, int $year, $duration, $director, array $genre)
     {
         $this->title = $title;
         $this->original_language = $original_language;
@@ -34,15 +34,15 @@ class Movies
         $this->genre = $genre;
     }
 
-    // Funzione the torna tutti i dettagli del film
+    // Funzione che torna tutti i dettagli del film
     public function getMovieDetails()
     {
         return $this->title . ' - ' . $this->original_language . ' - ' . $this->year . ' - ' . $this->duration . ' - ' . $this->director . ' - ' . $this->genre;
     }
 }
 
-$movie1 = new Movies('Iron Man', 'English', 2008, '2h 6m', 'Jon Favreau', 'Action');
-$movie2 = new Movies('Guardians of the Galaxy', 'English', 2014, '2h 2m', 'James Gunn', 'Action');
+$movie1 = new Movies('Iron Man', 'English', 2008, '2h 6m', 'Jon Favreau', ['Action', 'Science Fiction', 'Adventure']);
+$movie2 = new Movies('Guardians of the Galaxy', 'English', 2014, '2h 2m', 'James Gunn', ['Action', 'Science Fiction', 'Adventure']);
 
 $movies = [
     $movie1,
@@ -77,7 +77,7 @@ $movies = [
                 <div>Year: <?php echo $movie->year; ?></div>
                 <div>Duration: <?php echo $movie->duration; ?></div>
                 <div>Director: <?php echo $movie->director; ?></div>
-                <div>Genre: <?php echo $movie->genre; ?></div>
+                <div>Genre: <?php echo implode(', ', $movie->genre); ?></div>
             </div>
         <?php } ?>
 
